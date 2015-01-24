@@ -1,7 +1,5 @@
 (function () {
-    'use strict';
-
-    function PopupJS(data, options) {
+     function PopupJS(data, options) {
 
         var close;
         var _this = this;
