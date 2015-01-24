@@ -1,3 +1,172 @@
-div{
-  color:red;
-}
+.hoverTag{
+		outline: solid 1px rgba(64,214,4,1);
+		-webkit-box-shadow: 0px 0px 5px 1px rgba(64,214,4,1);
+		-moz-box-shadow: 0px 0px 5px 1px rgba(64,214,4,1);
+		box-shadow: 0px 0px 5px 1px rgba(64,214,4,1);
+	}
+	
+	.noEditable{
+		background-color: #eee;
+	}
+		
+	
+	#wrapperText{
+		width: 90%;
+		display: none;
+	}
+	
+	#tableEditText,#tableTexts{
+		width: 100%;
+	}
+
+	#tableEditText .trField .tdTitle, #tableTexts .trField .tdTitle{
+		width: 100px;
+	}
+	#tableEditText .trField .tdField input, #tableTexts .trField .tdField input{
+		width: 100%;
+	}
+
+	.classIdPath td input{
+	
+		background-color: #fff;
+		border: none;
+		font-size: 9px;
+		font-style: italic;
+		width: 100%;
+	}
+	.pathFocus{
+	
+		color:#01EB38;
+	}
+	.btnSettings:hover, .btnExportCode:hover{
+		opacity:1;
+	}
+	
+	.btnSettings, .btnExportCode{
+		width: 48px;
+		height: 48px;
+		position: fixed;
+		right: 30px;
+		cursor: pointer;
+	
+		background-repeat: no-repeat;
+		background-size: cover;
+		opacity:0.3;
+	}
+	
+	.btnSettings{
+		background-image: url("https://cdn.rawgit.com/marcosmatc/developer/master/resources/icons/ic_settings_24px.svg");
+		top:30px;
+		
+	}
+	
+	 .btnExportCode{
+		background-image: url("https://cdn.rawgit.com/marcosmatc/developer/master/resources/icons/ic_my_library_books_24px.svg");
+		top:90px;
+		
+	}
+	#divOptions{
+	
+		display: none;
+	}
+	#tableOptions{
+		margin-left: auto;
+		margin-right: auto;
+	
+	}
+	
+	#tableOptions tr td input{
+		width: 220px;
+		height: 24px;
+		border: solid 1px #ccc;
+		padding-left: 3px
+	
+	
+	}
+	
+	
+	
+	#tableOptions tr td div,#tableOptions tr td div{
+		width: 32px;
+		height: 26px;
+		background-color: #eee;
+		background-position: center;
+		background-repeat: no-repeat;
+		border: solid 1px #999;
+		float:left;
+		margin-left: 3px; margin-right: 3px;
+		
+	}
+	
+	.disableUp, .disableDown{
+		opacity:0.3;
+		-webkit-box-shadow: 0px 0px 0px 0px rgba(255,255,255,255);
+		-moz-box-shadow: 0px 0px 0px 0px rgba(255,255,255,255);
+		box-shadow: 0px 0px 0px 0px rgba(255,255,255,255);
+		outline: none;
+		
+	}
+	
+	.disableUp:hover, .disableDown:hover{
+		opacity:0.3;
+		-webkit-box-shadow: 0px 0px 0px 0px rgba(255,255,255,255);
+		-moz-box-shadow: 0px 0px 0px 0px rgba(255,255,255,255);
+		box-shadow: 0px 0px 0px 0px rgba(255,255,255,255);
+		
+		
+	}
+	
+	#tableOptions tr td div.btnUp, .disableUp{
+	
+		background-image: url("https://cdn.rawgit.com/marcosmatc/developer/master/resources/icons/ic_expand_less_24px.svg");
+		
+		
+	}
+	
+	#tableOptions tr td div.btnDown, .disableDown{
+	
+		background-image: url("https://cdn.rawgit.com/marcosmatc/developer/master/resources/icons/ic_expand_more_24px.svg");
+		
+		
+	}
+	
+	#tableOptions tr td div.btnEdit{
+	
+		background-image: url("https://cdn.rawgit.com/marcosmatc/developer/master/resources/icons/ic_edit_24px.svg");
+		
+		
+	}
+	
+	#tableOptions tr td div.btnSave{
+	
+		background-image: url("https://cdn.rawgit.com/marcosmatc/developer/master/resources/icons/ic_save_24px.svg");
+		
+		
+	}
+	#tableOptions tr td div.btnDelete{
+	
+		background-image: url("https://cdn.rawgit.com/marcosmatc/developer/master/resources/icons/ic_delete_24px.svg");
+		
+		
+	}
+	#tableOptions tr td div.btnAdd{
+	
+		background-image: url("https://cdn.rawgit.com/marcosmatc/developer/master/resources/icons/ic_done_24px.svg");
+		
+		
+	}
+	
+	#tableOptions tr td div.btnUp:hover,#tableOptions tr td div.btnDown:hover,#tableOptions tr td div.btnEdit:hover,#tableOptions tr td div.btnDelete:hover,#tableOptions tr td div.btnAdd:hover{
+		-webkit-box-shadow: 0px 1px 2px 1px rgba(80,80,80,1);
+		-moz-box-shadow: 0px 1px 2px 1px rgba(80,80,80,1);
+		box-shadow: 0px 0px 2px 1px rgba(80,80,80,1);
+	}
+	
+	#contaninerCode{
+		display: none;
+	}
+	.txtCode{
+	
+		font-size: 8px;
+		font-family: Verdana, Geneva, sans-serif;
+	}
