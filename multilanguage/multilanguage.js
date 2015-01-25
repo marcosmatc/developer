@@ -519,7 +519,7 @@ function initMultiLanguage(){
 		return false;
 	}
 	
-	$('body').append("<input type='button' onclick='toggleTexts()' value='toggle'/>");
+	//$('body').append("<input type='button' onclick='toggleTexts()' value='toggle'/>");
 	
 	var wrapperText = "";
 	wrapperText = wrapperText.concat("<div id='wrapperText'>");
