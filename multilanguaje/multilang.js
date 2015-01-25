@@ -124,7 +124,7 @@ function searchLanguaje(name){
 	}
 }
 
-function selectLanguaje(index){
+function selectLanguage(index){
 	
 	if(isNaN(index)){
 		
