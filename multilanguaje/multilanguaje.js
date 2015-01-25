@@ -174,7 +174,7 @@ function getSourceTextGroup(){
 	
 	return code;
 }
-
+//
 function getSourceTexts(){
 	var code = "";
 	code = code.concat("$(window).load(function() {\n\n");
