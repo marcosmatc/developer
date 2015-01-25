@@ -13,7 +13,7 @@ var multiTextArray =[]; //array para los valores de de los elementos
 
 var textGroupArray = []; //array para los valores de de los grupos
 
-var indexText = -1;
+var indexText = 0;
 
 var actualSelector = null;
 
@@ -103,6 +103,60 @@ function toggleTexts(){
 	
 
 }
+
+
+function searchLanguaje(name){
+	
+	if(textGroupArray.length==0){
+		
+		return -1;
+		
+	}else{
+		var index = -1;
+		$.each(textGroupArray, function(i, element) {
+			if(element.name==name)
+				index = i;
+			
+		});
+		
+		return index;
+		
+	}
+}
+
+function selectLanguaje(index){
+	
+	if(isNaN(index)){
+		
+		var i = searchLanguaje(index);
+		
+		if(i>-1)
+			indexText = i;
+		else
+			return false;
+		
+		
+		
+	}else if(index-1 < elementsArray.length){
+		console.debug('llegue aqui2');
+		indexText = index-1;
+		
+		
+	}else{
+		console.debug('llegue aqui3');
+		return false;
+		
+	}
+	console.debug('llegue aqui4');
+	$.each(elementsArray, function(i, element) {
+		var text = multiTextArray[i][indexText];
+		$(element).html(text);
+		
+	});
+	
+}
+
+
 
 
 function getSourceTextGroup(){
