@@ -512,7 +512,7 @@ function openPopupCustomizeText(){
 }
 
 
-function initMultiLanguaje(){
+function initMultiLanguage(){
 	
 	if(!editMode){
 		$('.btnSettings').css('display','none');
