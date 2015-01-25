@@ -317,7 +317,42 @@ function addText(element){
 	nTexts = textGroupArray.length;
 	
 	makeRowsTextGroups();
-			
+	
+var htmlRows = "";
+	
+	$.each(textGroupArray, function(index, group) {
+	
+				
+		
+		var trOpen =  "<tr class='trField'>";
+		var tdTitle = "		<td class='tdTitle'>" + group.name +'</td>';
+		var tdField = "		<td class='tdField'><input class='inputText' type='text' index='"+ index +"' onchange='setTextInArray(this)'/></td>";
+		var trClose =  "</tr>";
+		
+
+		htmlRows = htmlRows.concat(trOpen);
+		htmlRows = htmlRows.concat(tdTitle);
+		htmlRows = htmlRows.concat(tdField);
+		htmlRows = htmlRows.concat(trClose);
+		
+		
+		
+		arrayText[index]="";
+	
+	});
+	var trPath = "";
+		
+	trPath = trPath.concat("<tr class='classIdPath'>");
+	trPath = trPath.concat("	<td colspan='2'><input id='tPath' value='valor' type='text'  readonly='readonly' onmouseover=\"$(this).addClass( 'pathFocus');$(this.value).addClass( 'pathFocus');\" onmouseout=\"$(this).removeClass( 'pathFocus');$(this.value).removeClass( 'pathFocus')\"/></td>");
+	trPath = trPath.concat("</tr>");
+	
+	$( "#tableEditText" ).html("<tbody>" + trPath + htmlRows +  "</tbody>");
+	
+	$('.classIdPath > td:eq(0) > input').hover(function() {
+		$(this).addClass( "pathFocus" );
+	}, function() {
+    	$(this ).removeClass( "pathFocus" );
+	});
 
 }
 
