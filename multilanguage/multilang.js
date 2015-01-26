@@ -1,5 +1,5 @@
 var editMode = false;
-var contenedoresTexto = ['DIV','SPAN','FONT','LABEL','P','STRONG','HEADER','NAV','UL','LI','A','H1','H2','H3','H4','H5','H6','TABLE','TBODY','TR','TD'];
+var contenedoresTexto = ['SECTION','DIV','SPAN','FONT','LABEL','P','STRONG','HEADER','NAV','UL','LI','A','H1','H2','H3','H4','H5','H6','TABLE','TBODY','TR','TD'];
 
 var timerModal = null;
 
