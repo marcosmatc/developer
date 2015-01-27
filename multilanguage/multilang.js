@@ -521,6 +521,7 @@ function openPopupCustomizeText(){
 
 
 function initMultiLanguage(){
+	return false;
 	var wrapperText = "";
 	var btnSettings = "<div class='btnSettings' noedit='true' onclick='openPopupCustomizeText()'></div>";
 	var btnExportCode = "<div class='btnExportCode' noedit='true' onclick='openExportCode()'></div>";
