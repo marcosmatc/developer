@@ -64,15 +64,23 @@ function focusElement(input,path){
 }
 
 function descomponerNodoPadre(nodo){
+	$(nodo).contents().filter(function() {
+		return this.nodeType == Node.TEXT_NODE;
+	}).wrap('<span/>');
+	
+	
+
 	var hijos = $(nodo).children();
 	$.each(hijos, function(i, hijo) {
 		if($(hijo).children().length==0  && contenedoresTexto.indexOf(hijo.nodeName)>-1){
-			$(this).hover(function() {
-				setHover(this);
-			}, function() {
-		  		clearInterval(timerModal);
-		    	$( this ).removeClass( "hoverTag" );
-			});
+			if(editMode){
+				$(this).hover(function() {
+					setHover(this);
+				}, function() {
+					clearInterval(timerModal);
+					$( this ).removeClass( "hoverTag" );
+				});
+			}
 			
 			
 		}else if($(hijo).children().length>0 && contenedoresTexto.indexOf(hijo.nodeName)>-1){
@@ -513,23 +521,26 @@ function openPopupCustomizeText(){
 
 
 function initMultiLanguage(){
-	
-	if(!editMode){
-		$('.btnSettings').css('display','none');
-		return false;
-	}
-	
-	//$('body').append("<input type='button' onclick='toggleTexts()' value='toggle'/>");
-	
 	var wrapperText = "";
-	wrapperText = wrapperText.concat("<div id='wrapperText'>");
-	wrapperText = wrapperText.concat("	<table id='tableEditText'></table>");
-	wrapperText = wrapperText.concat("</div>");
-	
 	var btnSettings = "<div class='btnSettings' noedit='true' onclick='openPopupCustomizeText()'></div>";
 	var btnExportCode = "<div class='btnExportCode' noedit='true' onclick='openExportCode()'></div>";
 	
 	var contaninerCode = "";
+	
+	var divOptions = "";
+	
+	if(editMode){
+		$('.btnSettings').css('display','none');
+		//return false;
+	}
+	
+	
+	
+	wrapperText = wrapperText.concat("<div id='wrapperText'>");
+	wrapperText = wrapperText.concat("	<table id='tableEditText'></table>");
+	wrapperText = wrapperText.concat("</div>");
+	
+	
 	contaninerCode = contaninerCode.concat("<div id='contaninerCode'>");
 	contaninerCode = contaninerCode.concat("	<div style='width:90%; margin-left: auto; margin-right: auto;'>");
 	contaninerCode = contaninerCode.concat("		<h2 style='font-size: 14px; font-weight: 100; font-family: \"Trebuchet MS\", Helvetica, sans-serif'>Agregue el siguiente Código fuente al inicio de la etiqueta <strong>HEAD</strong> </h2>");
@@ -537,7 +548,7 @@ function initMultiLanguage(){
 	contaninerCode = contaninerCode.concat("	</div>");
 	contaninerCode = contaninerCode.concat("</div>");
 
-	var divOptions = "";
+	
 	divOptions = divOptions.concat("<div id='divOptions' noedit='true'>");
 	divOptions = divOptions.concat("	<table id='tableOptions' noedit='true'>");
 	divOptions = divOptions.concat("		<tr>");
@@ -561,6 +572,7 @@ function initMultiLanguage(){
 	
 	$(".btnSettings").draggable();
 	$(".btnExportCode").draggable();
+	
 	
 	var htmlRows = "";
 	
@@ -606,14 +618,15 @@ function initMultiLanguage(){
 			if(contenedoresTexto.indexOf(nodoHijo.nodeName)>-1 && $(nodoHijo).children().length>0){
 				descomponerNodoPadre(nodoHijo);
 			}else if(contenedoresTexto.indexOf(nodoHijo.nodeName)>-1){
-			
-				$(nodoHijo).hover(function() {
-					console.debug(nTexts);
-					setHover(nodoHijo);
-				}, function() {
-			  		clearInterval(timerModal);
-			    	$( nodoHijo ).removeClass( "hoverTag" );
-				});
+				if(editMode){
+					$(nodoHijo).hover(function() {
+						console.debug(nTexts);
+						setHover(nodoHijo);
+					}, function() {
+						clearInterval(timerModal);
+						$( nodoHijo ).removeClass( "hoverTag" );
+					});
+				}
 				
 			}
 		}
