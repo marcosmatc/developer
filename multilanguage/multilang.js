@@ -65,7 +65,8 @@ function focusElement(input,path){
 
 function descomponerNodoPadre(nodo){
 	$(nodo).contents().filter(function() {
-		return this.nodeType == Node.TEXT_NODE;
+		
+		return this.nodeType == Node.TEXT_NODE && this.nodeValue!=null && this.nodeValue.length>0;
 	}).wrap('<span/>');
 	
 	
