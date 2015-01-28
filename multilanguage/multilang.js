@@ -306,7 +306,7 @@ function setHover(elementHover){
 				}
 				
 			}});
-   	}, 800);
+   	}, 3800);
   	
 }
 
