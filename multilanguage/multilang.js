@@ -1,5 +1,5 @@
 var editMode = false;
-var contenedoresTexto = ['FORM','SECTION','DIV','SPAN','FONT','LABEL','P','STRONG','HEADER','NAV','UL','LI','A','H1','H2','H3','H4','H5','H6','TABLE','TBODY','TR','TD'];
+var contenedoresTexto = ['EM','FORM','SECTION','DIV','SPAN','FONT','LABEL','P','STRONG','HEADER','NAV','UL','LI','A','H1','H2','H3','H4','H5','H6','TABLE','TBODY','TR','TD'];
 
 var timerModal = null;
 
@@ -307,7 +307,7 @@ function setHover(elementHover){
 				}
 				
 			}});
-   	}, 3800);
+   	}, 1600);
   	
 }
 
