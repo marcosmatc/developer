@@ -1,5 +1,5 @@
 var editMode = false;
-var contenedoresTexto = ['EM','FORM','SECTION','DIV','SPAN','FONT','LABEL','P','STRONG','HEADER','NAV','UL','LI','A','H1','H2','H3','H4','H5','H6','TABLE','TBODY','TR','TD'];
+var contenedoresTexto = ['INPUT','EM','FORM','SECTION','DIV','SPAN','FONT','LABEL','P','STRONG','HEADER','NAV','UL','LI','A','H1','H2','H3','H4','H5','H6','TABLE','TBODY','TR','TD'];
 
 var timerModal = null;
 
@@ -106,7 +106,7 @@ function toggleTexts(){
 	$.each(elementsArray, function(i, element) {
 		var text = multiTextArray[i][indexText];
 		$(element).html(text);
-		
+		$(element).val(text);
 		
 	});
 	
