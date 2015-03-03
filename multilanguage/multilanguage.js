@@ -531,9 +531,9 @@ function initMultiLanguage(){
 	
 	var divOptions = "";
 	
-	if(editMode){
+	if(!editMode){
 		$('.btnSettings').css('display','none');
-		//return false;
+		return false;
 	}
 	
 	
