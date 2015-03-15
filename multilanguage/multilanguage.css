@@ -57,12 +57,14 @@
 	.btnSettings{
 		background-image: url("https://cdn.rawgit.com/marcosmatc/developer/master/resources/icons/ic_settings_24px.svg");
 		top:30px;
+		z-index: 9999;
 		
 	}
 	
 	 .btnExportCode{
 		background-image: url("https://cdn.rawgit.com/marcosmatc/developer/master/resources/icons/ic_my_library_books_24px.svg");
 		top:90px;
+		z-index: 9999;
 		
 	}
 	#divOptions{
