@@ -58,7 +58,7 @@ function setTextInArray(input){
 
 
 function focusElement(input,path){
-	console.debug($(path));
+	//console.debug($(path));
 	
 
 }
@@ -147,16 +147,16 @@ function selectLanguage(index){
 		
 		
 	}else if(index-1 < elementsArray.length){
-		console.debug('llegue aqui2');
+		//console.debug('llegue aqui2');
 		indexText = index-1;
 		
 		
 	}else{
-		console.debug('llegue aqui3');
+		//console.debug('llegue aqui3');
 		return false;
 		
 	}
-	console.debug('llegue aqui4');
+	//console.debug('llegue aqui4');
 	$.each(elementsArray, function(i, element) {
 		var text = multiTextArray[i][indexText];
 		$(element).html(text);
@@ -284,7 +284,7 @@ function setHover(elementHover){
 					if(elementsArray.indexOf(actualSelector)>-1){
 						newIndex = elementsArray.indexOf(actualSelector);
 					}
-					console.debug('-----------------------------------------');
+					//console.debug('-----------------------------------------');
 					elementsArray[newIndex] = actualSelector;
 					var arrayAux = [];
 					
@@ -293,16 +293,7 @@ function setHover(elementHover){
 					}
 					multiTextArray[newIndex] = arrayAux;
 					
-					$.each(elementsArray, function(i, value) {
-						console.debug('Elemento ' + i + ':' + value);
 					
-						$.each(multiTextArray[i], function(key,val) {
-						
-								console.debug('		text ' + key + ':' + val);
-						
-						});
-						console.debug('-----------------------------------------');
-					});
 				
 				}
 				
@@ -321,8 +312,7 @@ function downText(element,index){
 
 	textGroupArray[index] = elementAux;
 	textGroupArray[index+1] = elementToDown;
-	
-	console.debug(index);
+
 	
 	$('#tableOptions > tbody').html(makeHtmlRowsText());
 	
@@ -340,7 +330,7 @@ function upText(element,index){
 	textGroupArray[index] = elementAux;
 	textGroupArray[index-1] = elementToUp;
 	
-	console.debug(index);
+
 	
 	$('#tableOptions > tbody').html(makeHtmlRowsText());
 	
@@ -491,7 +481,6 @@ function makeHtmlRowsText(){
 		
 		
 	
-		console.debug('		text ' + key + ':' + val);
 		
 						
 	});
@@ -506,7 +495,7 @@ function makeHtmlRowsText(){
 }
 
 function openPopupCustomizeText(){
-	//console.debug(textGroupArray.length);
+	
 	
 	
 	$('#tableOptions > tbody').html(makeHtmlRowsText());
@@ -622,7 +611,7 @@ function initMultiLanguage(){
 			}else if(contenedoresTexto.indexOf(nodoHijo.nodeName)>-1){
 				if(editMode){
 					$(nodoHijo).hover(function() {
-						console.debug(nTexts);
+						//console.debug(nTexts);
 						setHover(nodoHijo);
 					}, function() {
 						clearInterval(timerModal);
